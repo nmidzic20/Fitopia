@@ -1,3 +1,33 @@
-<h1>Google Login</h1>
+<div class="login-container">
+  <asl-google-signin-button
+    type="standard"
+    size="medium"
+  ></asl-google-signin-button>
+</div>
+<div class="login-container">
+  <div class="login-box">
+    <h2>Login</h2>
+    <form>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter your password"
+          required
+        />
+      </div>
+      <button type="submit" (click)="onLoginClick()">Login</button>
+    </form>
+  </div>
+</div>
 
-<asl-google-signin-button type="icon" size="medium"></asl-google-signin-button>

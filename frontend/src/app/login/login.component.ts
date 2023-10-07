@@ -21,4 +21,23 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['home']);
     });
   }
+
+  onLoginClick(): void {
+    // Navigate to the 'home' route
+    this.router.navigate(['/home']);
+    this.user = {
+      id: '123',
+      email: '',
+      name: '',
+      photoUrl: '',
+      firstName: '',
+      lastName: '',
+      authToken: '',
+      idToken: '',
+      provider: '',
+      authorizationCode: '',
+      response: '',
+    };
+    this.loggedIn = true;
+  }
 }
