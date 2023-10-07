@@ -17,6 +17,7 @@ import {
   SocialAuthServiceConfig,
 } from '@abacritt/angularx-social-login';
 import { CharacterComponent } from './character/character.component';
+import { DailyQuestsComponent } from './daily-quests/daily-quests.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { CharacterComponent } from './character/character.component';
     LoginComponent,
     NotFoundComponent,
     CharacterComponent,
+    DailyQuestsComponent,
   ],
   imports: [
     BrowserModule,

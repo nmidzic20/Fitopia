@@ -1,0 +1,13 @@
+<div class="daily-quests">
+  <h2>Daily Quests</h2>
+  <ul class="quests-list">
+    <li *ngFor="let quest of dailyQuests" class="quest-item {{ quest.type }}">
+      <div class="quest-details">
+        <input type="checkbox" [(ngModel)]="quest.completed" />
+        <span [class.completed]="quest.completed">{{ quest.title }}</span>
+        <p>{{ quest.description }}</p>
+      </div>
+    </li>
+  </ul>
+</div>
+

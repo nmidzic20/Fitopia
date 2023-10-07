@@ -1,0 +1,71 @@
+/* Add styles for the .daily-quests container */
+.daily-quests {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Add styles for the list of quests */
+.quests-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Add styles for each quest item */
+.quest-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease; /* Hover effect */
+}
+
+/* Add styles for quest type colors */
+.quest-item.fire {
+  background-color: #FF7043; /* Orange */
+  color: white;
+}
+
+.quest-item.water {
+  background-color: #42A5F5; /* Blue */
+  color: white;
+}
+
+.quest-item.earth {
+  background-color: #421102;
+  color: white;
+}
+
+.quest-item.air {
+  background-color: #d713e1;
+  color: white;
+}
+
+/* Add more quest type colors as needed */
+
+/* Add styles for quest details (checkbox, title, description) */
+.quest-details {
+  flex-grow: 1;
+}
+
+/* Add styles for the checkbox */
+.quest-details input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Add styles for completed quests */
+.quest-details .completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Add hover effect */
+.quest-item:hover {
+  transform: scale(1.02);
+}
