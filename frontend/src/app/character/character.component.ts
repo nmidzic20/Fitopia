@@ -1,3 +1,4 @@
+// character.component.ts
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./character.component.scss']
 })
 export class CharacterComponent {
+  // Define character properties (you can retrieve these from your app's data)
+  character = {
+    name: 'Lily',
+    level: 5,
+    health: 80
+    // Add more character properties here
+  };
 
+  totalSteps = 10000;
 }
