@@ -1,1 +1,14 @@
-<p>character works!</p>
+<!-- character.component.html -->
+<div class="character-container">
+  <h2>Your Fitopia Character</h2>
+  <div class="character-avatar">
+    <img src="assets/lily.jpg" alt="Character Avatar">
+  </div>
+  <div class="character-stats">
+    <p>Name: {{ character.name }}</p>
+    <p>Level: {{ character.level }}</p>
+    <p>Health: {{ character.health }}%</p>
+    <p>Total Steps Today: {{ totalSteps }}</p> <!-- Display total steps here -->
+    <!-- Add more character stats here -->
+  </div>
+</div>

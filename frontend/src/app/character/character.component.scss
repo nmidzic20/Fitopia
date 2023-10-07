@@ -1,0 +1,19 @@
+/* character.component.scss */
+.character-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.character-avatar img {
+  max-width: 200px;
+  border-radius: 50%;
+}
+
+.character-stats {
+  margin-top: 20px;
+  font-size: 18px;
+
+  p {
+    margin: 10px 0;
+  }
+}
