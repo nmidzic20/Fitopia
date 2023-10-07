@@ -17,6 +17,7 @@ import {
   SocialAuthServiceConfig,
 } from '@abacritt/angularx-social-login';
 import { CharacterComponent } from './character/character.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,8 @@ import { CharacterComponent } from './character/character.component';
     HttpClientModule,
     SocialLoginModule,
     GoogleSigninButtonModule,
+    BrowserAnimationsModule,
+    MatIconModule,
   ],
   providers: [
     {

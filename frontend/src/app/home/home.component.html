@@ -1,1 +1,35 @@
-<p>home works!</p>
+<div class="flex-container">
+  <div class="left-container">
+    <div class="image-container">
+      <img src="../../assets/map.png" alt="Map" (click)="moveAvatar()" />
+      <div
+        class="avatar"
+        [style.transform]="
+          'translate(' + position.x + 'px, ' + position.y + 'px)'
+        "
+      >
+        <img src="../../assets/avatar.svg" alt="Avatar" />
+      </div>
+    </div>
+  </div>
+  <div class="right-container">
+    <div class="story" *ngIf="showStory">
+      <button mat-icon-button (click)="closeStory()">
+        <mat-icon>close</mat-icon>
+      </button>
+
+      <img src="../../assets/start.jpg" alt="Story" />
+      <p>
+        Part 1: A Mysterious Portal <br />
+        In a peaceful hamlet you lived a simple life. One fateful day, a
+        mysterious portal materialized in the heart of the village, emitting an
+        otherworldly glow. Fueled by curiosity and courage, you stepped into the
+        portal, finding yourself transported to an entirely new land.
+      </p>
+    </div>
+    <div class="button-container" *ngIf="!showStory">
+      <button class="blue-button">Daily Quests</button>
+      <button class="green-button">Journey</button>
+    </div>
+  </div>
+</div>

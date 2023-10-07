@@ -1,4 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Retro";
+  src: url("./assets/SuperLegendBoy-4w8Y.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Retro", sans-serif;
+}
