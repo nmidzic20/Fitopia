@@ -69,3 +69,14 @@
 .quest-item:hover {
   transform: scale(1.02);
 }
+
+.close-button {
+  width: 30px; /* Set the width of your button */
+  height: 30px; /* Set the height of your button */
+  background-image: url("../../assets/cancel-button.png"); /* Specify the image URL */
+  background-size: cover; /* Adjust how the image covers the button */
+  background-repeat: no-repeat; /* Prevent image repetition */
+  border: none; /* Remove the default button border */
+  cursor: pointer; /* Add a pointer cursor on hover for a clickable feel */
+  //float: right;
+}

@@ -13,6 +13,7 @@ export class HomeComponent {
   storyTitle: string | null = titles[0];
   storyText: string | null = texts[0];
   imageUrl = '../../assets/start.png';
+  showDailyQuests: boolean = false;
 
   route1: IWaypoint[] = [
     {
@@ -228,5 +229,9 @@ export class HomeComponent {
   closeStory(): void {
     console.log('story');
     this.showStory = false;
+  }
+
+  setDailyQuests(param: boolean): void {
+    this.showDailyQuests = false;
   }
 }
