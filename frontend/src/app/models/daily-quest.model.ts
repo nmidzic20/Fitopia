@@ -4,4 +4,5 @@ export interface DailyQuest {
   description: string;
   completed: boolean;
   type: string;
+  rewardPoints: number;
 }

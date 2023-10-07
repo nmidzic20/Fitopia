@@ -14,6 +14,7 @@ export class DailyQuestsComponent {
       description: 'Stay active and healthy!',
       completed: false,
       type: 'fire',
+      rewardPoints: 50,
     },
     {
       id: 2,
@@ -21,6 +22,7 @@ export class DailyQuestsComponent {
       description: 'Nourish your mind with knowledge.',
       completed: false,
       type: 'water',
+      rewardPoints: 30,
     },
     {
       id: 3,
@@ -28,6 +30,7 @@ export class DailyQuestsComponent {
       description: 'Relax your mind and reduce stress.',
       completed: false,
       type: 'earth',
+      rewardPoints: 20,
     },
     {
       id: 4,
@@ -35,6 +38,7 @@ export class DailyQuestsComponent {
       description: 'Experiment with nutritious cooking.',
       completed: false,
       type: 'air',
+      rewardPoints: 70,
     },
     {
       id: 5,
@@ -42,6 +46,7 @@ export class DailyQuestsComponent {
       description: 'Calm your thoughts and stay present.',
       completed: false,
       type: 'fire',
+      rewardPoints: 10,
     },
     {
       id: 6,
@@ -49,6 +54,17 @@ export class DailyQuestsComponent {
       description: 'Challenge your endurance and stamina.',
       completed: false,
       type: 'water',
+      rewardPoints: 100,
     },
   ];
+
+  totalPoints: number = 0;
+
+  markQuestCompleted(quest: DailyQuest): void {
+    if (!quest.completed) {
+      quest.completed = true;
+      this.totalPoints += quest.rewardPoints;
+      console.log(this.totalPoints);
+    }
+  }
 }

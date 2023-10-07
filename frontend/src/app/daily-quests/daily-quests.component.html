@@ -1,13 +1,16 @@
+<!-- src/app/daily-quests/daily-quests.component.html -->
 <div class="daily-quests">
   <h2>Daily Quests</h2>
   <ul class="quests-list">
     <li *ngFor="let quest of dailyQuests" class="quest-item {{ quest.type }}">
       <div class="quest-details">
-        <input type="checkbox" [(ngModel)]="quest.completed" />
+        <input type="checkbox" [(ngModel)]="quest.completed" [disabled]="quest.completed" (click)="markQuestCompleted(quest)" />
         <span [class.completed]="quest.completed">{{ quest.title }}</span>
         <p>{{ quest.description }}</p>
+      </div>
+      <div class="quest-reward">
+        <span *ngIf="quest.completed" class="reward">+{{ quest.rewardPoints }} Points</span>
       </div>
     </li>
   </ul>
 </div>
-
