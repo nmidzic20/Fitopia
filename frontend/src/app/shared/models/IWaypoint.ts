@@ -3,4 +3,6 @@ export interface IWaypoint {
   name: string;
   x: number;
   y: number;
+  imageUrl: string;
+  chapter: string | null;
 }

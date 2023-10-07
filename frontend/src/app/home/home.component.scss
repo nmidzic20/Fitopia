@@ -35,11 +35,13 @@
 .left-container {
   flex: 1;
   margin: 15px;
+  margin-left: 30px;
 }
 
 .right-container {
   flex: 1;
   margin: 15px;
+  margin-right: 30px;
 }
 
 .story {
@@ -53,8 +55,9 @@
   display: block;
   margin: 0 auto 20px;
   border-radius: 20px;
-  height: 200px;
+  height: 300px;
   width: fit-content;
+  max-width: 600px;
   object-fit: cover;
 }
 
@@ -97,4 +100,15 @@
 .green-button {
   background-color: green;
   color: white;
+}
+
+.image-button {
+  width: 30px; /* Set the width of your button */
+  height: 30px; /* Set the height of your button */
+  background-image: url("../../assets/cancel-button.png"); /* Specify the image URL */
+  background-size: cover; /* Adjust how the image covers the button */
+  background-repeat: no-repeat; /* Prevent image repetition */
+  border: none; /* Remove the default button border */
+  cursor: pointer; /* Add a pointer cursor on hover for a clickable feel */
+  //float: right;
 }

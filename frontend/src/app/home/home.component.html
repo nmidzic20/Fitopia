@@ -14,18 +14,10 @@
   </div>
   <div class="right-container">
     <div class="story" *ngIf="showStory">
-      <button mat-icon-button (click)="closeStory()">
-        <mat-icon>close</mat-icon>
-      </button>
+      <button class="image-button" (click)="closeStory()"></button>
 
-      <img src="../../assets/start.jpg" alt="Story" />
-      <p>
-        Part 1: A Mysterious Portal <br />
-        In a peaceful hamlet you lived a simple life. One fateful day, a
-        mysterious portal materialized in the heart of the village, emitting an
-        otherworldly glow. Fueled by curiosity and courage, you stepped into the
-        portal, finding yourself transported to an entirely new land.
-      </p>
+      <img [src]="imageUrl" alt="Story" />
+      <p>{{ storyText }}</p>
     </div>
     <div class="button-container" *ngIf="!showStory">
       <button class="blue-button">Daily Quests</button>
