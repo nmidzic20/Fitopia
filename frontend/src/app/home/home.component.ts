@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { IWaypoint } from '../shared/models/IWaypoint';
-import { chapters } from '../shared/models/IChapter';
+import { titles, texts } from '../shared/models/IChapter';
 
 @Component({
   selector: 'app-home',
@@ -10,8 +10,9 @@ import { chapters } from '../shared/models/IChapter';
 export class HomeComponent {
   @Input() position = { x: 0, y: 0 };
   showStory = false;
-  storyText: string | null = chapters[0];
-  imageUrl = '../../assets/start.jpg';
+  storyTitle: string | null = titles[0];
+  storyText: string | null = texts[0];
+  imageUrl = '../../assets/start.png';
 
   route1: IWaypoint[] = [
     {
@@ -19,8 +20,9 @@ export class HomeComponent {
       name: 'start',
       x: 244,
       y: 25,
-      imageUrl: '../../assets/start.jpg',
-      chapter: chapters[0],
+      imageUrl: '../../assets/start.png',
+      chapter: texts[0],
+      title: titles[0],
     },
     {
       id: 1,
@@ -28,7 +30,8 @@ export class HomeComponent {
       x: 244,
       y: 119,
       imageUrl: '../../assets/ch1.jpg',
-      chapter: chapters[1],
+      chapter: texts[1],
+      title: titles[1],
     },
     {
       id: 2,
@@ -36,7 +39,8 @@ export class HomeComponent {
       x: 244,
       y: 210,
       imageUrl: '../../assets/ch2.jpg',
-      chapter: chapters[2],
+      chapter: texts[2],
+      title: titles[2],
     },
     {
       id: 3,
@@ -44,7 +48,8 @@ export class HomeComponent {
       x: 150,
       y: 210,
       imageUrl: '../../assets/ch3.jpg',
-      chapter: chapters[3],
+      chapter: texts[3],
+      title: titles[3],
     },
     {
       id: 4,
@@ -52,7 +57,8 @@ export class HomeComponent {
       x: 50,
       y: 210,
       imageUrl: '../../assets/ch4a.jpg',
-      chapter: chapters[4],
+      chapter: texts[4],
+      title: titles[4],
     },
     {
       id: 5,
@@ -60,7 +66,8 @@ export class HomeComponent {
       x: 50,
       y: 305,
       imageUrl: '../../assets/ch5a.jpg',
-      chapter: chapters[5],
+      chapter: texts[5],
+      title: titles[5],
     },
     {
       id: 6,
@@ -68,7 +75,8 @@ export class HomeComponent {
       x: 50,
       y: 400,
       imageUrl: '../../assets/ch7.png',
-      chapter: chapters[6],
+      chapter: texts[6],
+      title: titles[6],
     },
     {
       id: 7,
@@ -76,7 +84,8 @@ export class HomeComponent {
       x: 50,
       y: 495,
       imageUrl: '../../assets/ch8.png',
-      chapter: chapters[7],
+      chapter: texts[7],
+      title: titles[7],
     },
     {
       id: 8,
@@ -84,7 +93,8 @@ export class HomeComponent {
       x: 147,
       y: 495,
       imageUrl: '../../assets/finish.png',
-      chapter: chapters[13],
+      chapter: texts[13],
+      title: titles[13],
     },
     {
       id: 9,
@@ -92,7 +102,8 @@ export class HomeComponent {
       x: 147,
       y: 585,
       imageUrl: '../../assets/finish.png',
-      chapter: chapters[14],
+      chapter: texts[14],
+      title: titles[14],
     },
   ];
 
@@ -102,8 +113,9 @@ export class HomeComponent {
       name: 'start',
       x: 244,
       y: 25,
-      imageUrl: '../../assets/start.jpg',
-      chapter: chapters[0],
+      imageUrl: '../../assets/start.png',
+      chapter: texts[0],
+      title: titles[0],
     },
     {
       id: 1,
@@ -111,7 +123,8 @@ export class HomeComponent {
       x: 244,
       y: 119,
       imageUrl: '../../assets/ch1.jpg',
-      chapter: chapters[1],
+      chapter: texts[1],
+      title: titles[1],
     },
     {
       id: 2,
@@ -119,7 +132,8 @@ export class HomeComponent {
       x: 244,
       y: 210,
       imageUrl: '../../assets/ch4b.jpg',
-      chapter: chapters[2],
+      chapter: texts[2],
+      title: titles[2],
     },
     {
       id: 3,
@@ -127,7 +141,8 @@ export class HomeComponent {
       x: 150,
       y: 210,
       imageUrl: '../../assets/ch3.jpg',
-      chapter: chapters[3],
+      chapter: texts[3],
+      title: titles[3],
     },
     {
       id: 4,
@@ -135,7 +150,8 @@ export class HomeComponent {
       x: 143,
       y: 301,
       imageUrl: '../../assets/ch4a.jpg',
-      chapter: chapters[9],
+      chapter: texts[9],
+      title: titles[9],
     },
     {
       id: 5,
@@ -143,7 +159,8 @@ export class HomeComponent {
       x: 243,
       y: 301,
       imageUrl: '../../assets/ch6b.jpg',
-      chapter: chapters[10],
+      chapter: texts[10],
+      title: titles[10],
     },
     {
       id: 6,
@@ -151,7 +168,8 @@ export class HomeComponent {
       x: 243,
       y: 395,
       imageUrl: '../../assets/ch7.png',
-      chapter: chapters[11],
+      chapter: texts[11],
+      title: titles[11],
     },
     {
       id: 7,
@@ -159,7 +177,8 @@ export class HomeComponent {
       x: 243,
       y: 490,
       imageUrl: '../../assets/ch8.png',
-      chapter: chapters[12],
+      chapter: texts[12],
+      title: titles[12],
     },
     {
       id: 8,
@@ -167,7 +186,8 @@ export class HomeComponent {
       x: 243,
       y: 585,
       imageUrl: '../../assets/finish.png',
-      chapter: chapters[13],
+      chapter: texts[13],
+      title: titles[13],
     },
     {
       id: 9,
@@ -175,7 +195,8 @@ export class HomeComponent {
       x: 147,
       y: 585,
       imageUrl: '../../assets/finish.png',
-      chapter: chapters[14],
+      chapter: texts[14],
+      title: titles[14],
     },
   ];
 
@@ -196,6 +217,7 @@ export class HomeComponent {
 
     this.imageUrl = this.currentWaypoint.imageUrl;
     this.storyText = this.currentWaypoint.chapter;
+    this.storyTitle = this.currentWaypoint.title;
     this.showStory = true;
 
     console.log(this.currentWaypoint);

@@ -17,6 +17,7 @@
       <button class="image-button" (click)="closeStory()"></button>
 
       <img [src]="imageUrl" alt="Story" />
+      <p>{{ storyTitle }}</p>
       <p>{{ storyText }}</p>
     </div>
     <div class="button-container" *ngIf="!showStory">
