@@ -225,7 +225,7 @@ export class HomeComponent {
 
   currentWaypoint: IWaypoint = this.route[0];
 
-  maxWaypoint: number = 0;
+  maxWaypoint: IWaypoint = this.route[0];
 
   moveAvatar() {
     let nextWaypoint = this.route[this.currentWaypoint.id + 1];
@@ -245,8 +245,8 @@ export class HomeComponent {
 
     console.log(this.currentWaypoint);
 
+    this.maxWaypoint = this.currentWaypoint;
     this.currentWaypoint = nextWaypoint;
-    this.maxWaypoint = this.currentWaypoint.id;
     console.log('max way' + this.maxWaypoint);
   }
 
@@ -259,30 +259,22 @@ export class HomeComponent {
     this.showDailyQuests = false;
   }
 
-  currentSlideIndex: number = 0;
-
   nextSlide(x: number): void {
-    let nextWaypoint = this.route[this.currentWaypoint.id + x];
+    let nextWaypoint = this.route[this.maxWaypoint.id + x];
 
     if (
       nextWaypoint == undefined ||
-      nextWaypoint.id < 0 ||
-      nextWaypoint.id >= this.maxWaypoint
+      nextWaypoint.id >= this.currentWaypoint.id
     ) {
       console.log('return');
       return;
     }
 
-    this.imageUrl = this.currentWaypoint.imageUrl;
-    this.storyText = this.currentWaypoint..chapter;
-    this.storyTitle = this.currentWaypoint..title;
+    this.maxWaypoint = nextWaypoint;
+
+    this.imageUrl = this.maxWaypoint.imageUrl;
+    this.storyText = this.maxWaypoint.chapter;
+    this.storyTitle = this.maxWaypoint.title;
     this.showStory = true;
-
-    this.currentWaypoint = nextWaypoint;
-
-    console.log('this maxwaypoint');
-    console.log(this.maxWaypoint);
-    console.log('this nextwaypoint');
-    console.log(nextWaypoint);
   }
 }

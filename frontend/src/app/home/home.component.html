@@ -17,10 +17,10 @@
       <button class="image-button" (click)="closeStory()"></button>
 
       <!-- Add left and right navigation buttons -->
-      <button class="nav-button left-button" (click)="nextSlide(-2)">
+      <button class="nav-button left-button" (click)="nextSlide(-1)">
         &#8249;
       </button>
-      <button class="nav-button right-button" (click)="nextSlide(2)">
+      <button class="nav-button right-button" (click)="nextSlide(1)">
         &#8250;
       </button>
 
@@ -33,7 +33,7 @@
       <button class="blue-button" (click)="showDailyQuests = true">
         Daily Quests
       </button>
-      <button class="green-button">Journey</button>
+      <button class="green-button" (click)="showStory = true">Journey</button>
     </div>
 
     <app-daily-quests
