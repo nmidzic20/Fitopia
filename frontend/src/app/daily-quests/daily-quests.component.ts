@@ -1,5 +1,5 @@
 import { Component, Input, Renderer2 } from '@angular/core';
-import { DailyQuest } from '../models/daily-quest.model';
+import { IDailyQuest } from '../shared/models/IDailyQuest';
 import { Output, EventEmitter } from '@angular/core';
 
 @Component({
@@ -10,7 +10,7 @@ import { Output, EventEmitter } from '@angular/core';
 export class DailyQuestsComponent {
   @Input() showDailyQuests: boolean = false;
   @Output() showDailyQuestsChange = new EventEmitter<boolean>();
-  dailyQuests: DailyQuest[] = [
+  dailyQuests: IDailyQuest[] = [
     {
       id: 1,
       title: 'Complete a 30-minute workout',
@@ -65,7 +65,7 @@ export class DailyQuestsComponent {
 
   constructor(private renderer: Renderer2) {}
 
-  markQuestCompleted(quest: DailyQuest): void {
+  markQuestCompleted(quest: IDailyQuest): void {
     if (!quest.completed) {
       quest.completed = true;
       this.totalPoints += quest.rewardPoints;

@@ -1,4 +1,3 @@
-/* character.component.scss */
 .character-container {
   text-align: center;
   padding: 20px;
@@ -18,7 +17,6 @@
   }
 }
 
-/* circular-progress-bar.component.scss */
 .progress-bar {
   display: inline-block;
   position: relative;
@@ -30,15 +28,15 @@
 
 .progress-circle-background {
   fill: none;
-  stroke: #ddd; /* Background color */
+  stroke: #ddd;
   stroke-width: 10;
 }
 
 .progress-circle-fill {
   fill: none;
-  stroke: #007bff; /* Progress color */
+  stroke: #007bff;
   stroke-width: 10;
-  stroke-dasharray: 283; /* Circumference of a circle (2 * π * radius) */
+  stroke-dasharray: 283;
   stroke-dashoffset: calc(283 - (283 * 72) / 100);
   transition: stroke-dashoffset 0.3s ease-in-out;
 }

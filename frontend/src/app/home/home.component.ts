@@ -29,9 +29,6 @@ export class HomeComponent {
 
   checkSteps() {
     console.log(this.steps);
-    /*if (this.steps! >= 10000) {
-      this.moveAvatar();
-    }*/
   }
 
   resizeMap() {}

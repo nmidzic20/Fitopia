@@ -1,4 +1,4 @@
-export interface DailyQuest {
+export interface IDailyQuest {
   id: number;
   title: string;
   description: string;

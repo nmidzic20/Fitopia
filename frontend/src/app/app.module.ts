@@ -47,7 +47,6 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     MatMenuModule,
     CanvasJSAngularChartsModule,
     NgCircleProgressModule.forRoot({
-      // set defaults here
       radius: 100,
       outerStrokeWidth: 16,
       innerStrokeWidth: 8,

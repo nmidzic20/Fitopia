@@ -23,7 +23,6 @@ export class LoginComponent implements OnInit {
   }
 
   onLoginClick(): void {
-    // Navigate to the 'home' route
     this.router.navigate(['/home']);
     this.user = {
       id: '123',

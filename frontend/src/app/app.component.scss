@@ -8,11 +8,9 @@ nav {
   align-items: center;
 
   .centerContainer {
-    //flex-grow: 1; /* Allow the center container to grow and occupy remaining space */
     display: flex;
-    justify-content: flex-end; /* Center the links horizontally */
-    align-items: center; /* Center the links vertically */
-    //padding-left: 250px;
+    justify-content: flex-end;
+    align-items: center;
     width: 100%;
   }
 
@@ -29,7 +27,7 @@ nav {
     align-items: center;
 
     li {
-      margin-right: 20px; /* Increase the right margin for spacing */
+      margin-right: 20px;
       display: inline-block;
 
       a {
