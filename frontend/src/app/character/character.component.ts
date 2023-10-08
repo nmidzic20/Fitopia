@@ -17,8 +17,12 @@ export class CharacterComponent {
     health: 80,
     // Add more character properties here
     progress: 72,
-    points: this.points | 0
+    points: this.points | 0,
   };
 
   totalSteps = 7214;
+
+  calcDashOffset(): number {
+    return this.character.progress;
+  }
 }

@@ -20,6 +20,11 @@ import { CharacterComponent } from './character/character.component';
 import { DailyQuestsComponent } from './daily-quests/daily-quests.component';
 import { MatIconModule } from '@angular/material/icon';
 
+import { MatMenuModule } from '@angular/material/menu';
+import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
+
+import { NgCircleProgressModule } from 'ng-circle-progress';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +44,17 @@ import { MatIconModule } from '@angular/material/icon';
     GoogleSigninButtonModule,
     BrowserAnimationsModule,
     MatIconModule,
+    MatMenuModule,
+    CanvasJSAngularChartsModule,
+    NgCircleProgressModule.forRoot({
+      // set defaults here
+      radius: 100,
+      outerStrokeWidth: 16,
+      innerStrokeWidth: 8,
+      outerStrokeColor: '#78C000',
+      innerStrokeColor: '#C7E596',
+      animationDuration: 300,
+    }),
   ],
   providers: [
     {
@@ -49,7 +65,10 @@ import { MatIconModule } from '@angular/material/icon';
           {
             id: GoogleLoginProvider.PROVIDER_ID,
             provider: new GoogleLoginProvider(
-              '211442586950-4chi1oon8v2l16es525cs3nkf7q073hp.apps.googleusercontent.com'
+              '211442586950-4chi1oon8v2l16es525cs3nkf7q073hp.apps.googleusercontent.com',
+              {
+                oneTapEnabled: false,
+              }
             ),
           },
         ],

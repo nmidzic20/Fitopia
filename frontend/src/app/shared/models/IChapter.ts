@@ -21,10 +21,7 @@ export const titles: string[] = [
 ];
 
 export const texts: string[] = [
-  `In a peaceful hamlet you lived a simple life. One fateful day, a
-  mysterious portal materialized in the heart of the village, emitting an
-  otherworldly glow. Fueled by curiosity and courage, you stepped into the
-  portal, finding yourself transported to an entirely new land.`,
+  `In a peaceful hamlet at the edge of a whimsical world, our RPG character, a young adventurer named Lily, lived a simple life. One fateful day, a mysterious portal materialized in the heart of the village, emitting an otherworldly glow. Fueled by curiosity and courage, Lily stepped into the portal, finding herself transported to an entirely new land.`,
 
   `Emerging from the portal, Lily found herself in a lush, mystical meadow.
 Confused but undeterred, she pressed onward. Soon, Lily encountered a wise Frog named Aurelius, who revealed the land's dire predicament. An ancient sorcerer, Malphos, had stolen the magical gems that maintained harmony in this world. Aurelius implored Lily for assistance, and our heroine gladly accepted the quest.`,
@@ -55,5 +52,5 @@ Confused but undeterred, she pressed onward. Soon, Lily encountered a wise Frog 
   `Continuing her quest, Lily stumbled upon a secluded shrine guarded by an imprisoned Elemental Guardian, a being of immense power. To free the guardian and gain its trust, Lily had to confront a menacing elemental beast, defeating it in a battle of wits and strength. Grateful for her help, the guardian revealed that Malphos kept the final gem within his impregnable fortress.
 `,
   `The grand adventure culminated as Lily reached the formidable Sky Citadel, where Malphos awaited. After navigating treacherous traps and facing hordes of minions, Lily confronted Malphos in a climactic showdown. With unwavering resolve and clever tactics, she defeated the malevolent sorcerer, restoring the stolen gems to their rightful places.`,
-  `Having saved the world and forged new alliances along the way, Lily returned to her village through the portal, which sealed behind her. The village celebrated her triumphant return, and Lily knew that her exploits in the Super Mario 2-like world map had forever changed her, leaving behind a legacy of courage and heroism.`,
+  `Having saved the world and forged new alliances along the way, Lily returned to her village through the portal, which sealed behind her. The village celebrated her triumphant return, and Lily knew that her exploits in the Fitopia world had forever changed her, leaving behind a legacy of courage and heroism.`,
 ];

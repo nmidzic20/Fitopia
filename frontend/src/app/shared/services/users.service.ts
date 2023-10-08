@@ -65,6 +65,12 @@ export class UsersService {
     let steps =
       fitnessData.message.bucket[fitnessData.message.bucket.length - 1]
         .dataset[0].point[0].value[0].intVal;
-    return steps;
+    let stepsArray: number[] = [];
+    fitnessData.message.bucket.forEach((element) => {
+      let s = element.dataset[0].point[0].value[0].intVal;
+      console.log(s);
+      stepsArray.push(s);
+    });
+    return stepsArray;
   }
 }

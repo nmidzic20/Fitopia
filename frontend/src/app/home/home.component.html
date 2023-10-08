@@ -11,6 +11,12 @@
         <img src="../../assets/character.svg" alt="Avatar" />
       </div>
     </div>
+    <div
+      style="margin-top: 30px; margin-left: 100px"
+      *ngIf="steps !== undefined && steps !== null"
+    >
+      Number of steps taken today: {{ steps }}
+    </div>
   </div>
   <div class="right-container">
     <div class="story" *ngIf="showStory">
@@ -24,7 +30,7 @@
         &#8250;
       </button>
 
-      <img [src]="imageUrl" alt="Story" />
+      <div id="story-img-container"><img [src]="imageUrl" alt="Story" /></div>
       <p>{{ storyTitle }}</p>
       <p>{{ storyText }}</p>
     </div>
@@ -33,7 +39,32 @@
       <button class="blue-button" (click)="showDailyQuests = true">
         Daily Quests
       </button>
-      <button class="green-button" (click)="showStory = true">Journey</button>
+      <button class="green-button" mat-button [matMenuTriggerFor]="menu">
+        Journey
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <img
+            src="../../assets/journey_option_1.png"
+            alt="w3"
+            style="height: 50px"
+          />
+        </button>
+        <button mat-menu-item>
+          <img
+            src="../../assets/journey_option_2.png"
+            alt="w3"
+            style="height: 50px"
+          />
+        </button>
+        <button mat-menu-item>
+          <img
+            src="../../assets/journey_option_3.png"
+            alt="w3"
+            style="height: 50px"
+          />
+        </button>
+      </mat-menu>
     </div>
 
     <app-daily-quests

@@ -8,11 +8,12 @@ nav {
   align-items: center;
 
   .centerContainer {
-    flex-grow: 1; /* Allow the center container to grow and occupy remaining space */
+    //flex-grow: 1; /* Allow the center container to grow and occupy remaining space */
     display: flex;
-    //justify-content: center; /* Center the links horizontally */
+    justify-content: flex-end; /* Center the links horizontally */
     align-items: center; /* Center the links vertically */
-    padding-left: 250px;
+    //padding-left: 250px;
+    width: 100%;
   }
 
   .logoContainer {

@@ -16,21 +16,22 @@ export class HomeComponent {
   imageUrl = '../../assets/start.png';
   showDailyQuests: boolean = false;
   steps: number | undefined;
+  stepsArray: number[] | undefined;
 
   constructor(private userService: UsersService) {
-    //this.getSteps();
-    //this.checkSteps();
+    this.getSteps();
+    this.checkSteps();
   }
 
   async getSteps() {
-    this.steps = await this.userService.getFitnessData();
+    this.stepsArray = await this.userService.getFitnessData();
   }
 
   checkSteps() {
     console.log(this.steps);
-    if (this.steps! >= 10000) {
+    /*if (this.steps! >= 10000) {
       this.moveAvatar();
-    }
+    }*/
   }
 
   resizeMap() {}
@@ -49,7 +50,7 @@ export class HomeComponent {
       id: 1,
       name: 'ch1',
       x: 244,
-      y: 119,
+      y: 114,
       imageUrl: '../../assets/ch1.jpg',
       chapter: texts[1],
       title: titles[1],
@@ -58,7 +59,7 @@ export class HomeComponent {
       id: 2,
       name: 'ch2',
       x: 244,
-      y: 210,
+      y: 202,
       imageUrl: '../../assets/ch2.jpg',
       chapter: texts[2],
       title: titles[2],
@@ -67,7 +68,7 @@ export class HomeComponent {
       id: 3,
       name: 'ch3',
       x: 150,
-      y: 210,
+      y: 202,
       imageUrl: '../../assets/ch3.jpg',
       chapter: texts[3],
       title: titles[3],
@@ -76,7 +77,7 @@ export class HomeComponent {
       id: 4,
       name: 'ch4a',
       x: 50,
-      y: 210,
+      y: 202,
       imageUrl: '../../assets/ch4a.jpg',
       chapter: texts[4],
       title: titles[4],
@@ -85,7 +86,7 @@ export class HomeComponent {
       id: 5,
       name: 'ch5a',
       x: 50,
-      y: 305,
+      y: 285,
       imageUrl: '../../assets/ch5a.jpg',
       chapter: texts[5],
       title: titles[5],
@@ -94,7 +95,7 @@ export class HomeComponent {
       id: 6,
       name: 'ch6a',
       x: 50,
-      y: 400,
+      y: 380,
       imageUrl: '../../assets/ch7.png',
       chapter: texts[6],
       title: titles[6],
@@ -103,7 +104,7 @@ export class HomeComponent {
       id: 7,
       name: 'ch7a',
       x: 50,
-      y: 495,
+      y: 463,
       imageUrl: '../../assets/ch8.png',
       chapter: texts[7],
       title: titles[7],
@@ -112,7 +113,7 @@ export class HomeComponent {
       id: 8,
       name: 'ch8a',
       x: 147,
-      y: 495,
+      y: 463,
       imageUrl: '../../assets/finish.png',
       chapter: texts[13],
       title: titles[13],
@@ -121,7 +122,7 @@ export class HomeComponent {
       id: 9,
       name: 'finish',
       x: 147,
-      y: 585,
+      y: 557,
       imageUrl: '../../assets/finish.png',
       chapter: texts[14],
       title: titles[14],
@@ -142,7 +143,7 @@ export class HomeComponent {
       id: 1,
       name: 'ch1',
       x: 244,
-      y: 119,
+      y: 114,
       imageUrl: '../../assets/ch1.jpg',
       chapter: texts[1],
       title: titles[1],
@@ -151,7 +152,7 @@ export class HomeComponent {
       id: 2,
       name: 'ch2',
       x: 244,
-      y: 210,
+      y: 202,
       imageUrl: '../../assets/ch4b.jpg',
       chapter: texts[2],
       title: titles[2],
@@ -160,7 +161,7 @@ export class HomeComponent {
       id: 3,
       name: 'ch3',
       x: 150,
-      y: 210,
+      y: 202,
       imageUrl: '../../assets/ch3.jpg',
       chapter: texts[3],
       title: titles[3],
@@ -169,7 +170,7 @@ export class HomeComponent {
       id: 4,
       name: 'ch4b',
       x: 143,
-      y: 301,
+      y: 285,
       imageUrl: '../../assets/ch4a.jpg',
       chapter: texts[9],
       title: titles[9],
@@ -178,7 +179,7 @@ export class HomeComponent {
       id: 5,
       name: 'ch5b',
       x: 243,
-      y: 301,
+      y: 285,
       imageUrl: '../../assets/ch6b.jpg',
       chapter: texts[10],
       title: titles[10],
@@ -187,7 +188,7 @@ export class HomeComponent {
       id: 6,
       name: 'ch6b',
       x: 243,
-      y: 395,
+      y: 375,
       imageUrl: '../../assets/ch7.png',
       chapter: texts[11],
       title: titles[11],
@@ -196,7 +197,7 @@ export class HomeComponent {
       id: 7,
       name: 'ch7b',
       x: 243,
-      y: 490,
+      y: 463,
       imageUrl: '../../assets/ch8.png',
       chapter: texts[12],
       title: titles[12],
@@ -205,7 +206,7 @@ export class HomeComponent {
       id: 8,
       name: 'ch8b',
       x: 243,
-      y: 585,
+      y: 557,
       imageUrl: '../../assets/finish.png',
       chapter: texts[13],
       title: titles[13],
@@ -214,7 +215,7 @@ export class HomeComponent {
       id: 9,
       name: 'finish',
       x: 147,
-      y: 585,
+      y: 557,
       imageUrl: '../../assets/finish.png',
       chapter: texts[14],
       title: titles[14],
@@ -248,6 +249,9 @@ export class HomeComponent {
     this.maxWaypoint = this.currentWaypoint;
     this.currentWaypoint = nextWaypoint;
     console.log('max way' + this.maxWaypoint);
+
+    if (this.stepsArray != undefined)
+      this.steps = this.stepsArray[this.currentWaypoint.id];
   }
 
   closeStory(): void {

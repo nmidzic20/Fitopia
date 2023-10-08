@@ -1,4 +1,4 @@
-import { Component, Input, ViewChild } from '@angular/core';
+import { Component, Input, Renderer2 } from '@angular/core';
 import { DailyQuest } from '../models/daily-quest.model';
 import { Output, EventEmitter } from '@angular/core';
 
@@ -62,6 +62,8 @@ export class DailyQuestsComponent {
   ];
 
   totalPoints: number = 0;
+
+  constructor(private renderer: Renderer2) {}
 
   markQuestCompleted(quest: DailyQuest): void {
     if (!quest.completed) {
