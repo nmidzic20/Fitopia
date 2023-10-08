@@ -1,11 +1,20 @@
 import { Injectable } from '@angular/core';
 import { IUser } from '../models/IUser';
+import {
+  IBucket,
+  IDataset,
+  IFitnessData,
+  IMessage,
+  IPoint,
+} from '../models/FitnessData';
+
 import { HttpClient } from '@angular/common/http';
-import { Observable, tap } from 'rxjs';
+import { Observable, catchError, tap, throwError } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 const apiUrl = environment.apiUrl;
 const url = `${apiUrl}api/users`;
+const fitnessUrl = `${apiUrl}api`;
 
 @Injectable({
   providedIn: 'root',
@@ -39,5 +48,23 @@ export class UsersService {
 
   deleteUser(id: number) {
     return this.http.delete<IUser>(`${url}/${id}`);
+  }
+
+  async getFitnessData() {
+    let zaglavlje = new Headers();
+    zaglavlje.set('Accept', 'application/json');
+
+    let urlFitness = `${fitnessUrl}/fitness-data`;
+    let odgovor = (await fetch(urlFitness, {
+      method: 'GET',
+      headers: zaglavlje,
+    })) as Response;
+    let podaci = await odgovor.text();
+    console.log(podaci);
+    let fitnessData = JSON.parse(podaci) as IFitnessData;
+    let steps =
+      fitnessData.message.bucket[fitnessData.message.bucket.length - 1]
+        .dataset[0].point[0].value[0].intVal;
+    return steps;
   }
 }

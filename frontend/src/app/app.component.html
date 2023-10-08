@@ -1,36 +1,90 @@
-<nav>
+<!--<nav>
   <ul>
     <li>
       <a routerLink="/home">
-        <img src="assets/logo.png" alt="Logo" class="nav-logo" height="40px" />
+        <div class="logoContainer">
+          <img
+            src="assets/logo.png"
+            alt="Logo"
+            class="nav-logo"
+            height="40px"
+          />
+        </div>
       </a>
     </li>
     <li>
       <a routerLink="/home">
-        <img src="assets/home-group.png" alt="Home" class="nav-home" />
+        <div class="linkContainer">
+          <mat-icon>home</mat-icon>
+          <div class="link">Home</div>
+        </div>
       </a>
     </li>
 
     <li>
       <a routerLink="/character" *ngIf="isLoggedIn">
-        <img
-          src="assets/character-group.png"
-          alt="Character"
-          class="nav-character"
-        />
+        <div class="linkContainer">
+          <mat-icon>sentiment_very_satisfied</mat-icon>
+          <div class="link">Character</div>
+        </div>
       </a>
     </li>
     <li>
       <a routerLink="/login" *ngIf="!isLoggedIn">
-        <img src="assets/login-group.png" alt="Login" class="nav-login" />
+        <div class="linkContainer">
+          <mat-icon>login</mat-icon>
+          <div class="link">Log In</div>
+        </div>
       </a>
     </li>
     <li>
-      <a (click)="signOut()" *ngIf="isLoggedIn">
-        Log out
-      </a>
+      <a (click)="signOut()" *ngIf="isLoggedIn"> Log out </a>
     </li>
   </ul>
+</nav>-->
+<nav>
+  <div class="logoContainer">
+    <a routerLink="/home">
+      <img src="assets/logo.png" alt="Logo" class="nav-logo" height="40px" />
+    </a>
+  </div>
+
+  <div class="centerContainer">
+    <ul>
+      <li>
+        <a routerLink="/home">
+          <div class="linkContainer">
+            <mat-icon>home</mat-icon>
+            <div class="link">Home</div>
+          </div>
+        </a>
+      </li>
+      <li *ngIf="isLoggedIn">
+        <a routerLink="/character">
+          <div class="linkContainer">
+            <mat-icon>sentiment_very_satisfied</mat-icon>
+            <div class="link">Character</div>
+          </div>
+        </a>
+      </li>
+      <li *ngIf="!isLoggedIn">
+        <a routerLink="/login">
+          <div class="linkContainer">
+            <mat-icon>login</mat-icon>
+            <div class="link">Log In</div>
+          </div>
+        </a>
+      </li>
+      <li *ngIf="isLoggedIn">
+        <a (click)="signOut()"
+          ><div class="linkContainer">
+            <mat-icon>logout</mat-icon>
+            <div class="link">Log Out</div>
+          </div></a
+        >
+      </li>
+    </ul>
+  </div>
 </nav>
 
 <router-outlet></router-outlet>

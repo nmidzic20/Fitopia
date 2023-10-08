@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { IWaypoint } from '../shared/models/IWaypoint';
 import { chapters } from '../shared/models/IChapter';
+import { UsersService } from '../shared/services/users.service';
 
 @Component({
   selector: 'app-home',
@@ -12,6 +13,23 @@ export class HomeComponent {
   showStory = false;
   storyText: string | null = chapters[0];
   imageUrl = '../../assets/start.jpg';
+  steps: number | undefined;
+
+  constructor(private userService: UsersService) {
+    //this.getSteps();
+    //this.checkSteps();
+  }
+
+  async getSteps() {
+    this.steps = await this.userService.getFitnessData();
+  }
+
+  checkSteps() {
+    console.log(this.steps);
+    if (this.steps! >= 10000) {
+      this.moveAvatar();
+    }
+  }
 
   route1: IWaypoint[] = [
     {
@@ -183,7 +201,7 @@ export class HomeComponent {
 
   currentWaypoint: IWaypoint = this.route[0];
 
-  moveAvatar(): void {
+  moveAvatar() {
     let nextWaypoint = this.route[this.currentWaypoint.id + 1];
 
     if (nextWaypoint == undefined) return;
