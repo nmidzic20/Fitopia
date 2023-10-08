@@ -115,3 +115,26 @@
   cursor: pointer; /* Add a pointer cursor on hover for a clickable feel */
   //float: right;
 }
+
+.nav-button {
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 50%;
+  outline: none;
+}
+
+.left-button {
+  position: absolute;
+  right: 45%;
+}
+
+.right-button {
+  position: absolute;
+  right: 50px;
+}

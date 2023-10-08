@@ -225,6 +225,8 @@ export class HomeComponent {
 
   currentWaypoint: IWaypoint = this.route[0];
 
+  maxWaypoint: number = 0;
+
   moveAvatar() {
     let nextWaypoint = this.route[this.currentWaypoint.id + 1];
 
@@ -244,6 +246,7 @@ export class HomeComponent {
     console.log(this.currentWaypoint);
 
     this.currentWaypoint = nextWaypoint;
+    this.maxWaypoint = this.currentWaypoint.id;
   }
 
   closeStory(): void {
@@ -253,5 +256,27 @@ export class HomeComponent {
 
   setDailyQuests(param: boolean): void {
     this.showDailyQuests = false;
+  }
+
+  currentSlideIndex: number = 0;
+
+  nextSlide(x: number): void {
+    let nextWaypoint = this.route[this.currentWaypoint.id + x];
+
+    if (
+      nextWaypoint == undefined ||
+      nextWaypoint.id < 0 ||
+      nextWaypoint.id >= this.maxWaypoint
+    )
+      return;
+
+    this.imageUrl = this.currentWaypoint.imageUrl;
+    this.storyText = this.currentWaypoint.chapter;
+    this.storyTitle = this.currentWaypoint.title;
+    this.showStory = true;
+
+    console.log(this.currentWaypoint);
+
+    this.currentWaypoint = nextWaypoint;
   }
 }
