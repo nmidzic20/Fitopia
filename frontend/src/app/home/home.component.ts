@@ -33,6 +33,8 @@ export class HomeComponent {
     }
   }
 
+  resizeMap() {}
+
   route1: IWaypoint[] = [
     {
       id: 0,
