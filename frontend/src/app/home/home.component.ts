@@ -247,6 +247,7 @@ export class HomeComponent {
 
     this.currentWaypoint = nextWaypoint;
     this.maxWaypoint = this.currentWaypoint.id;
+    console.log('max way' + this.maxWaypoint);
   }
 
   closeStory(): void {
@@ -267,16 +268,21 @@ export class HomeComponent {
       nextWaypoint == undefined ||
       nextWaypoint.id < 0 ||
       nextWaypoint.id >= this.maxWaypoint
-    )
+    ) {
+      console.log('return');
       return;
+    }
 
     this.imageUrl = this.currentWaypoint.imageUrl;
-    this.storyText = this.currentWaypoint.chapter;
-    this.storyTitle = this.currentWaypoint.title;
+    this.storyText = this.currentWaypoint..chapter;
+    this.storyTitle = this.currentWaypoint..title;
     this.showStory = true;
 
-    console.log(this.currentWaypoint);
-
     this.currentWaypoint = nextWaypoint;
+
+    console.log('this maxwaypoint');
+    console.log(this.maxWaypoint);
+    console.log('this nextwaypoint');
+    console.log(nextWaypoint);
   }
 }

@@ -17,14 +17,17 @@
       <button class="image-button" (click)="closeStory()"></button>
 
       <!-- Add left and right navigation buttons -->
-      <button class="nav-button left-button" (click)="nextSlide(-1)">&#8249;</button>
-      <button class="nav-button right-button" (click)="nextSlide(1)">&#8250;</button>
+      <button class="nav-button left-button" (click)="nextSlide(-2)">
+        &#8249;
+      </button>
+      <button class="nav-button right-button" (click)="nextSlide(2)">
+        &#8250;
+      </button>
 
       <img [src]="imageUrl" alt="Story" />
       <p>{{ storyTitle }}</p>
       <p>{{ storyText }}</p>
     </div>
-
 
     <div class="button-container" *ngIf="!showStory && !showDailyQuests">
       <button class="blue-button" (click)="showDailyQuests = true">
