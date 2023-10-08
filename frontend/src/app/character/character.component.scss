@@ -39,7 +39,7 @@
   stroke: #007bff; /* Progress color */
   stroke-width: 10;
   stroke-dasharray: 283; /* Circumference of a circle (2 * π * radius) */
-  stroke-dashoffset: calc(283 - (283 * progress) / 100);
+  stroke-dashoffset: calc(283 - (283 * 72) / 100);
   transition: stroke-dashoffset 0.3s ease-in-out;
 }
 
