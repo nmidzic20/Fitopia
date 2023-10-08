@@ -17,12 +17,17 @@
       <button class="image-button" (click)="closeStory()"></button>
 
       <img [src]="imageUrl" alt="Story" />
+      <p>{{ storyTitle }}</p>
       <p>{{ storyText }}</p>
     </div>
-    <div class="button-container" *ngIf="!showStory">
-      <button class="blue-button">Daily Quests</button>
+    <div class="button-container" *ngIf="!showStory && !showDailyQuests">
+      <button class="blue-button" (click)="showDailyQuests = true">
+        Daily Quests
+      </button>
       <button class="green-button">Journey</button>
     </div>
+
+    <app-daily-quests [showDailyQuests]="showDailyQuests" (showDailyQuestsChange)="setDailyQuests($event)">
+    </app-daily-quests>
   </div>
 </div>
-<app-daily-quests></app-daily-quests>

@@ -17,3 +17,38 @@
     margin: 10px 0;
   }
 }
+
+/* circular-progress-bar.component.scss */
+.progress-bar {
+  display: inline-block;
+  position: relative;
+}
+
+.progress-circle {
+  transform: rotate(-90deg);
+}
+
+.progress-circle-background {
+  fill: none;
+  stroke: #ddd; /* Background color */
+  stroke-width: 10;
+}
+
+.progress-circle-fill {
+  fill: none;
+  stroke: #007bff; /* Progress color */
+  stroke-width: 10;
+  stroke-dasharray: 283; /* Circumference of a circle (2 * π * radius) */
+  stroke-dashoffset: calc(283 - (283 * progress) / 100);
+  transition: stroke-dashoffset 0.3s ease-in-out;
+}
+
+.progress-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  font-weight: bold;
+}
+

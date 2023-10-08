@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
 import { DailyQuest } from '../models/daily-quest.model';
+import { Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-daily-quests',
@@ -7,6 +8,8 @@ import { DailyQuest } from '../models/daily-quest.model';
   styleUrls: ['./daily-quests.component.scss'],
 })
 export class DailyQuestsComponent {
+  @Input() showDailyQuests: boolean = false;
+  @Output() showDailyQuestsChange = new EventEmitter<boolean>();
   dailyQuests: DailyQuest[] = [
     {
       id: 1,
@@ -66,5 +69,11 @@ export class DailyQuestsComponent {
       this.totalPoints += quest.rewardPoints;
       console.log(this.totalPoints);
     }
+  }
+
+  closeDailyQuests(): void {
+    console.log('quests closed');
+    this.showDailyQuests = false;
+    this.showDailyQuestsChange.emit(this.showDailyQuests);
   }
 }

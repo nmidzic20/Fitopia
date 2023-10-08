@@ -1,5 +1,6 @@
 <!-- src/app/daily-quests/daily-quests.component.html -->
-<div class="daily-quests">
+<div class="daily-quests" *ngIf="showDailyQuests" >
+  <button class="close-button" (click)="closeDailyQuests()"></button>
   <h2>Daily Quests</h2>
   <ul class="quests-list">
     <li *ngFor="let quest of dailyQuests" class="quest-item {{ quest.type }}">

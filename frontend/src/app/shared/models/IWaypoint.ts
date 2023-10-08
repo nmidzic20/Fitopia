@@ -5,4 +5,5 @@ export interface IWaypoint {
   y: number;
   imageUrl: string;
   chapter: string | null;
+  title: string | null;
 }
