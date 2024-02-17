@@ -5,7 +5,7 @@ The offered features would include daily quests for promoting physical and menta
 The map of the game world and logo are original - credit: [kjand296](https://www.github.com/kjand296).
 The chapter artwork and story are created using AI assets.
 
-![til](./demo.gif)
+![demo gif](./demo.gif)
 
 # Technologies
 
