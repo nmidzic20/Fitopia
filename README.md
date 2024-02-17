@@ -24,7 +24,13 @@ npm install
 node index.js 
 ```
 
-From `frontend` directory, run `ng serve` to start the web application and go to `http://localhost:4200`
+From `frontend` director, to start the web application:
+
+```
+npm install --force
+ng serve
+```
+Go to: `http://localhost:4200`
 
 # Test login data
 
