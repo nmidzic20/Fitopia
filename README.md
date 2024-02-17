@@ -2,7 +2,8 @@ A web application created within 24 hours for RiHack 2023 hackathon, aimed at pr
 
 The offered features would include daily quests for promoting physical and mental health, like drinking X glasses of water or reading a chapter of a book, and completing each chapter unlocks new worlds set in a new location (e.g. grassland, desert, ocean, lava world).
 
-The map of the game world and logo are original, the chapter artwork is created using AI assets.
+The map of the game world and logo are original - credit: [@username] (https://www.github.com/kjand296).
+The chapter artwork and story are created using AI assets.
 
 ![til](./demo.gif)
 
