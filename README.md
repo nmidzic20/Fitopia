@@ -34,4 +34,4 @@ Go to: `http://localhost:4200`
 
 # Test login data
 
-For demonstration purposes, leaving empty fields or any login data is valid.
+In development version, only Google login has been enabled in order to allow connection to Google Fit app.
