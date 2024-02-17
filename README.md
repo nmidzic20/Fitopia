@@ -17,7 +17,12 @@ Database: SQLite
 
 # Installation
 
-From `backend` directory, run `node index.js` to start the backend server for API calls.
+From `backend` directory:
+
+```
+npm install // to install necessary node modules
+node index.js // to start the backend server for API calls.
+```
 
 From `frontend` directory, run `ng serve` to start the web application and go to `http://localhost:4200`
 
