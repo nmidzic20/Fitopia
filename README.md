@@ -7,8 +7,20 @@ The chapter artwork and story are created using AI assets.
 
 ![til](./demo.gif)
 
+# Technologies
+
+Frontend: Angular
+
+Backend: NodeJS
+
+Database: SQLite
+
 # Installation
 
-From `backend` directory, run `node index.js`
+From `backend` directory, run `node index.js` to start the backend server for API calls.
 
-From `frontend` directory, run `ng serve` and go to `http://localhost:4200`
+From `frontend` directory, run `ng serve` to start the web application and go to `http://localhost:4200`
+
+# Test login data
+
+For demonstration purposes, leaving empty fields or any login data is valid.
